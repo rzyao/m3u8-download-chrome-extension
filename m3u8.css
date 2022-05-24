@@ -1,0 +1,157 @@
+#box {
+  margin: 0;
+  padding: 0;
+  width: 250px;
+  height: 320px;
+  position: fixed;
+  bottom: 150px;
+  right: 10vw;
+  z-index: 99999999999;
+  border-radius: 50%;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+}
+#boxed{
+  margin: 0;
+  padding: 0;
+  width: 250px;
+  height: 320px;
+  position: fixed;
+  bottom: 150px;
+  right: 10vw;
+  z-index: 99999999999;
+  border-radius: 50%;
+  border-radius: 20px;
+  background-color: rgba(211, 60, 60, 0.671);
+  box-shadow: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+}
+.box1 {
+  width: 100rpx;
+  height: 80rpx;
+  margin-top: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+.vue {
+  margin: 0;
+  padding: 0;
+  width: 250px;
+  height: 250px;
+  bottom: 0;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  z-index: 99999999999;
+}
+
+/* 外圈 */
+.loader {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  border-radius: 50%;
+  border: 4px solid transparent;
+  border-top-color: #7fdfe6;
+  /* 执行动画 ： 动画名 时长 线性的 无限次 */
+  animation: spin 1s linear infinite;
+}
+
+/* 中圈 */
+.loader::before {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  right: 5px;
+  bottom: 5px;
+  border-radius: 50%;
+  border: 4px solid transparent;
+  border-top-color: hsl(273, 63%, 66%);
+  /* 执行动画 ： 动画名 时长 线性的 无限次 */
+  animation: spin 4s linear infinite;
+}
+
+/* 内圈 */
+.loader::after {
+  content: "";
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  right: 15px;
+  bottom: 15px;
+  border-radius: 50%;
+  border: 4px solid transparent;
+  border-top-color: hsl(29, 72%, 69%);
+  /* 执行动画 ： 动画名 时长 线性的 无限次 */
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.paused {
+  animation-play-state: paused;
+}
+.paused::before {
+  animation-play-state: paused;
+}
+.paused::after {
+  animation-play-state: paused;
+}
+.center {
+  position: fixed;
+  width: 250px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 0 20px 20px;
+  border: 1px solid rgba(190, 121, 121, 0.5);
+  flex-wrap: wrap;
+}
+.bgc {
+  position: fixed;
+  width: 250px;
+  height: 250px;
+  border-radius: 0 0 20px 20px;
+  background-color: rgba(28, 31, 25, 0.5);
+}
+#click {
+  font-size: 30px;
+  color: #fdf1ef;
+  width: 250px;
+  text-align: center;
+}
+#clarity {
+  font-size: 30px;
+  color: #fdf1ef;
+  width: 250px;
+  text-align: center;
+}
+.xiazai {
+  position: fixed;
+  bottom: 200px;
+  right: 200px;
+  width: 100px;
+  height: 100px;
+  background-color: #f5957d;
+  color: #faf8f8;
+  font-size: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

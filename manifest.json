@@ -1,0 +1,80 @@
+{
+	"name": "m3u8download",
+	"version": "1.0",
+	"manifest_version": 2,
+	"description": "获取淘宝商品链接12位id，打开管理页面和数据库进行互动",
+	"icons": {
+		"16": "img/tao16.png",
+		"48": "img/tao48.png",
+		"128": "img/tao128.png"
+	},
+	"browser_action": {
+		"default_icon": "img/tao16.png",
+		"default_title": "m3u8",
+		"default_popup": "popup.html"
+	},
+	"permissions": [
+		"webNavigation",
+		"tabs",
+		"contextMenus",
+		"http://127.0.0.1/",
+		"activeTab",
+		"alarms",
+		"background",
+		"bookmarks",
+		"browsingData",
+		"clipboardRead",
+		"clipboardWrite",
+		"contentSettings",
+		"contextMenus",
+		"cookies",
+		"debugger",
+		"declarativeContent",
+		"desktopCapture",
+		"downloads",
+		"fontSettings",
+		"gcm",
+		"geolocation",
+		"history",
+		"identity",
+		"idle",
+		"management",
+		"notifications",
+		"pageCapture",
+		"power",
+		"privacy",
+		"proxy",
+		"sessions",
+		"storage",
+		"system.cpu",
+		"system.display",
+		"system.memory",
+		"system.storage",
+		"tabCapture",
+		"tabs",
+		"topSites",
+		"tts",
+		"ttsEngine",
+		"unlimitedStorage",
+		"webNavigation",
+		"webRequest",
+		"webRequestBlocking",
+		"https://*/*"
+	],
+	"background": {
+		
+	},
+	"content_scripts": [
+		{
+			"run_at": "document_start",
+			"matches": ["http://*/*","https://*/*"],
+			"js": ["jquery-3.6.0.js","vue.min.js","background.js"],
+			"css": ["m3u8.css"]
+		},
+		{
+			"matches":["https://www.xfreehd.com/*"],
+			"css":["css/xfreehd.css"],
+			"js":["jquery-3.6.0.js","xfreehd.js"]
+		}
+	]
+}

@@ -1,0 +1,21 @@
+#divbox {
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+  width: 80px;
+  height: auto;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  border: 1px solid #eeeeee;
+  background-color: #3d8ac7;
+}
+.child {
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  border: 1px solid #eeeeee;
+  background-color: #3d8ac7;
+}
